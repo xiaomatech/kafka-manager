@@ -17,13 +17,6 @@ mkdir: clean
 	mkdir -p rpmbuild/SRPMS
 
 rpm:
-    #wget https://github.com/yahoo/kafka-manager/archive/1.3.3.21.tar.gz && tar -zxvf 1.3.3.21.tar.gz
-    #cd ./kafka-manager-1.3.3.21
-    #./sbt clean dist
-    #cp target/universal/kafka-manager-1.3.3.21.zip ./SOURCES
-
-    cp -r SOURCES/* rpmbuild/SOURCES
-
 	rpmbuild $(RPM_OPTS) \
 	  --define "_topdir %(pwd)" \
 	  --define "_builddir %{_topdir}/rpmbuild/BUILD" \
