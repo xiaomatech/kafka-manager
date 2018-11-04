@@ -1,0 +1,12 @@
+[Unit]
+Description=Kafka Manager
+After=network.target
+
+[Service]
+User=kafka-manager
+Group=kafka-manager
+EnvironmentFile=/etc/sysconfig/kafka-manager
+ExecStart=/bin/java $KAFKA_M_PID $KAFKA_M_CONFIG $KAFKA_M_LOGGER $KAFKA_M_USER_DIR -cp $CLASSPATH play.core.server.ProdServerStart
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,5 @@
+KAFKA_M_PID=-Dpidfile.path=/var/run/kafka-manager/kafka-manager.pid
+KAFKA_M_CONFIG=-Dconfig.file=/etc/kafka-manager/application.conf
+KAFKA_M_LOGGER=-Dlogger.file=/etc/kafka-manager/logger.xml -Dkafka-manager.logs.dir=/var/log/kafka-manager
+KAFKA_M_USER_DIR=-Duser.dir=/usr/share/kafka-manager
+CLASSPATH=/etc/kafka-manager/:/usr/share/kafka-manager/*
